@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  username  String
+  password String
+  phone String
+  teams Team[] @relation("teamMembers")
+}
+
+model Competition {
+  id    String @id
+  name String
+  description String
+  startDate DateTime
+  endDate DateTime
+  rules String?
+  prizes String?
+  banner String?
+  location String?
+  organizer String
+  authorImg String?
+  contact String
+  prize String?
+  image String?
+  status String
+  teams Team[] @relation("competition")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Team {
+  id   Int     @id @default(autoincrement())
+  competition Competition? @relation("competition", fields: [competitionId], references: [id])
+  competitionId String?
+  name String
+  members User[] @relation("teamMembers")
+} 

@@ -1,0 +1,48 @@
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Competition Editor</title><link rel="stylesheet" type="text/css" href="/style.css"><script src="https://cdn.tailwindcss.com"></script><link rel="icon" href="/favicon.png" type="image/x-icon"><style>
+    body {
+      font-family: sans-serif;
+    }
+
+    /* Apply sans-serif font to specific elements if needed */
+    header,
+    h1,
+    button,
+    label,
+    input,
+    textarea, 
+    nav,
+    a,
+    p,
+    span,
+    footer {
+      font-family: sans-serif;
+    }
+  </style></head><body><div class="content flex relative flex-col p-4"><nav>
+        <a href="#">Home</a>
+        <a href="#preview-summary">Summary</a>
+        <a href="#preview-rules">Rules</a>
+        <a href="#preview-prizes">Prizes</a>
+        <a href="#signupForm">Join!</a>
+      </nav><br><div id="preview-banner-blur"></div><div id="preview-banner" style="background-image: url(null);"></div><br><h1 id="preview-title">New Contest</h1><div class="author-section">
+        <div class="author-image">
+          <img id="preview-author-image" src="">
+        </div>
+        <div class="author-info" style="background-color: #ffffff">
+          <h3 class="h3-author">Organizer:</h3>
+          <div id="preview-author-info">
+            <div>
+              <p class="ml-1 mb-2 h-8 rounded-[5px] inline-block">Name: <span id="preview-author-name" class="min-w-16 bg-slate-200 p-1"></span></p>
+            </div>
+            <div>
+              <p class=" ml-1 mb-2 inline-block h-8 rounded-[5px]">Email: <span id="preview-author-email" class="min-w-16 bg-slate-200 p-1"></span></p>
+            </div>
+          </div>
+        </div>
+      </div><br><h1>Summary</h1><div id="preview-summary" class="rounded-corner" style="width: 100%; background-color: #f0f0f0; padding: 10px;"></div><br><h1 class="rounded-corner">Prizes</h1><div id="preview-prizes" class="rounded-corner" style="width: 100%; background-color: #f0f0f0; padding: 10px;"></div><br><div style="width: 100%; background-color: #f0f0f0; padding: 10px;" class="rounded-corner">
+        <div style="width: 300px;">
+          <h1 style="text-align: left; font-size:20px;">SIGN UP</h1>
+          <br>
+          <p id="error-message" style="color: red;"></p>
+          <form id="signupForm"></form>
+        </div>
+      </div><br><h1 class="rounded-corner">Rules</h1><div id="preview-rules" class="rounded-corner" style="width: 100%; background-color: #f0f0f0; padding: 10px;"></div><br><br></div><script src="/signup.js"></script></body></html>

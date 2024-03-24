@@ -1,0 +1,21 @@
+{
+  "name": "gemini",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@fastify/static": "^7.0.1",
+    "@prisma/client": "^5.11.0",
+    "@types/formidable": "^3.4.5",
+    "@types/jsdom": "^21.1.6",
+    "fastify": "^4.26.2",
+    "formidable": "^3.5.1",
+    "jsdom": "^24.0.0",
+    "open": "^10.1.0"
+  }
+}
